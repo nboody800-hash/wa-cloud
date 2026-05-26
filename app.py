@@ -3,8 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-GEMINI_KEY = "AIzaSyAngqkaM-uQ1_NssO3-KU2g6PIhrfb4oyk"
-
+os.environ.get("GEMINI_KEY", "AIzaSyCZoMgYYh0oe2g28thdUk9F-Sc1mwrofUI")
 @app.route('/')
 def home():
     with open('index.html', 'r', encoding='utf-8') as f:
